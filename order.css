@@ -1,0 +1,75 @@
+/* Umum */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e2a3b;
+    color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(135deg, #ff5722, #ffcc00);
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.logo {
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+form {
+    background: #273349;
+    padding: 30px;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffcc00;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    background: #1e2a3b;
+    color: #f4f4f4;
+}
+
+button.send-button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #ff5722, #ffcc00);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button.send-button:hover {
+    transform: scale(1.05);
+}
+
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid #273349;
+}

@@ -1,0 +1,245 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1117;
+    color: #f4f4f4;
+}
+
+.hero {
+    position: relative;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.logo {
+    height: 160px;
+    border-radius: 15px;
+    width: auto;
+    margin-bottom: 0px;
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.subtitle {
+    margin: 10px 0 20px;
+}
+
+.cta-button {
+    background: linear-gradient(90deg, #ffcc00, #ff5722);
+    color: #0d1117;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+}
+
+.pricing-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #1e2a3b;
+}
+
+.section-title {
+     font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff4500, #ffa500, #ffffff, #87ceeb, #00ffff);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pricing-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: linear-gradient(135deg,#0c6dde,#1f2b43);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+     font-size: 2rem;
+    font-weight: bold;
+    animation: fireice 3s infinite linear;
+    background: linear-gradient(90deg, #ff4500, #ffa500, #ffffff, #87ceeb, #00ffff);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.card-list {
+    list-style: none;
+    padding: 0;
+}
+
+.card-list li {
+    margin: 10px 0;
+}
+
+.card-button {
+    background: #ffcc00;
+    color: #273349;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.premium {
+    background: linear-gradient(135deg, #99370a, #ffcc00);
+    color: #0d1117;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #161b22;
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-button {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.whatsapp {
+    background: #25d366;
+}
+
+.youtube {
+    background: red;
+}
+
+.instagram {
+    background: #e4405f;
+}
+
+.social-button:hover {
+    opacity: 0.8;
+}
+
+.card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-item {
+    display: flex;
+    justify-content: space-between; /* Durasi di kiri, harga di kanan */
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #444; /* Garis pemisah antar item */
+    transition: all 0.3s ease-in-out;
+}
+
+.pricing-item:hover {
+    background-color: #273349; /* Warna gold saat hover */
+    color: #ffcc00;
+    transform: scale(1.05); /* Efek zoom */
+}
+
+.duration {
+    font-weight: bold;
+    text-align: left;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.price {
+    font-weight: bold;
+    text-align: right;
+    color: #ffcc00;
+    font-size: 18px;
+}
+
+@keyframes fire-effect {
+    0% {
+        background-position: 0% 50%;
+        color: #ffcc00;
+    }
+    50% {
+        background-position: 100% 50%;
+        color: #f44336;
+    }
+    100% {
+        background-position: 0% 50%;
+        color: #ffcc00;
+    }
+}
+@keyframes fireice {
+    0% {
+        background-position: 0% 50%;
+        color: #fff4afc5; /* Api oranye */
+        text-shadow: 0 0 10px #ffe22b, 0 0 20px #f47f00, 0 0 30px #ffa500;
+    }
+    25% {
+        background-position: 50% 50%;
+        color: #ffa500; /* Kuning keemasan */
+        text-shadow: 0 0 10px #ffa500, 0 0 20px #ffd700, 0 0 30px #fffacd;
+    }
+    50% {
+        background-position: 100% 50%;
+        color: #ffffff; /* Berlian putih */
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #e0ffff, 0 0 30px #87ceeb;
+    }
+    75% {
+        background-position: 75% 50%;
+        color: #87ceeb; /* Biru es */
+        text-shadow: 0 0 10px #87ceeb, 0 0 20px #00bfff, 0 0 30px #1e90ff;
+    }
+    100% {
+        background-position: 0% 50%;
+        color: #00ffff; /* Biru muda dingin */
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #40e0d0, 0 0 30px #add8e6;
+    }
+}
+
+.features-list {
+     font-size: 20px;
+}

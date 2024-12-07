@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Sekarang</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="https://sm.ign.com/t/ign_in/screenshot/default/1-eis-pc-launch_brze.1280.png" alt="Logo" class="logo">
+        <h1>PESAN SEKARANG</h1>
+    </header>
+
+    <!-- Form Pesanan -->
+    <main>
+        <form id="orderForm" action="https://api.whatsapp.com/send" method="get">
+            <div class="form-group">
+                <label for="name">Nama:</label>
+                <!-- Tambahkan placeholder -->
+                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" pattern="[A-Za-z ]+" title="Hanya boleh huruf" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <!-- Tambahkan minimal panjang karakter -->
+                <input type="password" id="password" name="password" placeholder="Masukkan password akun" minlength="6" title="Minimal 6 karakter" required>
+            </div>
+            <div class="form-group">
+                <label for="protocol">Protokol VPN:</label>
+                <select id="protocol" name="protocol" required>
+                    <option value="">Pilih Protokol VPN</option>
+                    <option value="SSH WEBSOCKET">SSH WEBSOCKET</option>
+                    <option value="SSH SelowDNS">SSH SelowDNS</option>
+                    <option value="OPEN SSH">OPEN SSH</option>
+                    <option value="SSH UDP">SSH UDP</option>
+                    <option value="Xray/Vmess">Xray/Vmess</option>
+                    <option value="Xray/Vless">Xray/Vless</option>
+                    <option value="Trojan">Trojan</option>
+                    <option value="ShadowsocksR">ShadowsocksR</option>
+                    <option value="Shadowsocks-Libev">Shadowsocks-Libev</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="service">Pilih Layanan:</label>
+                <select id="service" name="service">
+                    <optgroup label="SG-ID">
+                        <option value="Rp 3.000">3 HARI - Rp 3.000</option>
+                        <option value="Rp 5.000">7 HARI - Rp 5.000</option>
+                        <option value="Rp 8.000">15 HARI - Rp 8.000</option>
+                        <option value="Rp 10.000">22 HARI - Rp 10.000</option>
+                        <option value="Rp 12.000">30 HARI - Rp 12.000</option>
+                        <option value="Rp 20.000">60 HARI - Rp 20.000</option>
+                    </optgroup>
+                    <optgroup label="SG-VIP">
+                        <option value="Rp 4.000 VIP">3 HARI - Rp 4.000 VIP</option>
+                        <option value="Rp 7.000 VIP">7 HARI - Rp 7.000 VIP</option>
+                        <option value="Rp 10.000 VIP">15 HARI - Rp 10.000 VIP
+                        </option>
+                        <option value="Rp 13.000 VIP">22 HARI - Rp 13.000 VIP
+                        </option>
+                        <option value="Rp 16.000 VIP">30 HARI - Rp 16.000 VIP
+                        </option>
+                        <option value="Rp 28.000 VIP">60 HARI - Rp 28.000 VIP
+                        </option>
+                    </optgroup>
+                </select>
+            </div>
+            <input type="hidden" name="phone" value="6285789987714">
+            <input type="hidden" name="text" id="whatsappMessage">
+            <button type="submit" class="send-button">Kirim ke WhatsApp</button>
+        </form>
+    </main>
+
+    <!-- Informasi dan Cara Pengisian -->
+    <div class="warning">
+        <h2>Cara Pengisian</h2>
+        <table>
+            <tr>
+                <td><strong>Nama:</strong></td>
+                <td>Nama untuk user VPN Anda</td>
+            </tr>
+            <tr>
+                <td><strong>Password:</strong></td>
+                <td>Password untuk akun VPN (SSH)</td>
+            </tr>
+            <tr>
+                <td><strong>Protokol:</strong></td>
+                <td>Jenis akun VPN (SSH, VMESS, VLESS, dsb.)</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; SETELAH DIKIRIM SS PAY DAN AKAN KAMI PROSES</p>
+    </footer>
+
+    <!-- JavaScript untuk WhatsApp -->
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // prevent default form submission
+            var name = document.getElementById('name').value;
+            var password = document.getElementById('password').value;
+            var protocol = document.getElementById('protocol').value;
+            var service = document.getElementById('service').value;
+
+            var message = `╭─「  *DETAIL PEMBELIAN* 」\n│Nama:  ${name}\n│Password Akun:  ${password}\n│Protokol VPN:  ${protocol}\n│Layanan:  ${service} \n╰─────────────────`;
+            document.getElementById('whatsappMessage').value = message;
+
+            var encodedMessage = encodeURIComponent(message);
+            this.action = `https://api.whatsapp.com/send?phone=6282278687542&text=${encodedMessage}`;
+            window.open(this.action); // open WhatsApp in a new tab
+        });
+    </script>
+</body>
+</html>
