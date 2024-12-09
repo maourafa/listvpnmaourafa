@@ -243,3 +243,25 @@ footer {
 .features-list {
      font-size: 20px;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    overflow: auto;
+}
+
+.free {
+     
+    background: linear-gradient(135deg,#41445a,#dcdcfe);
+    color: #0d1117;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s;
+}
