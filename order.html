@@ -32,7 +32,7 @@
                 <label for="protocol">Protokol VPN:</label>
                 <select id="protocol" name="protocol" required>
                     <option value="">Pilih Protokol VPN</option>
-                    <option value="SSH WEBSOCKET">SSH WEBSOCKET</option>
+                    <option value="SSH WEBSOCKET">SSH WS</option>
                     <option value="SSH SelowDNS">SSH SelowDNS</option>
                     <option value="OPEN SSH">OPEN SSH</option>
                     <option value="SSH UDP">SSH UDP</option>
@@ -41,33 +41,105 @@
                     <option value="Trojan">Trojan</option>
                     <option value="ShadowsocksR">ShadowsocksR</option>
                     <option value="Shadowsocks-Libev">Shadowsocks-Libev</option>
+                    <option value="NoobVpn">NOOB VPN</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="service">Pilih Layanan:</label>
-                <select id="service" name="service">
-                    <optgroup label="SG-ID">
-                        <option value="Rp 3.000">3 HARI - Rp 3.000</option>
-                        <option value="Rp 5.000">7 HARI - Rp 5.000</option>
-                        <option value="Rp 8.000">15 HARI - Rp 8.000</option>
-                        <option value="Rp 10.000">22 HARI - Rp 10.000</option>
-                        <option value="Rp 12.000">30 HARI - Rp 12.000</option>
-                        <option value="Rp 20.000">60 HARI - Rp 20.000</option>
-                    </optgroup>
-                    <optgroup label="SG-VIP">
-                        <option value="Rp 4.000 VIP">3 HARI - Rp 4.000 VIP</option>
-                        <option value="Rp 7.000 VIP">7 HARI - Rp 7.000 VIP</option>
-                        <option value="Rp 10.000 VIP">15 HARI - Rp 10.000 VIP
-                        </option>
-                        <option value="Rp 13.000 VIP">22 HARI - Rp 13.000 VIP
-                        </option>
-                        <option value="Rp 16.000 VIP">30 HARI - Rp 16.000 VIP
-                        </option>
-                        <option value="Rp 28.000 VIP">60 HARI - Rp 28.000 VIP
-                        </option>
-                    </optgroup>
-                </select>
+<select id="service" name="service">
+    <optgroup label="SG-DO">
+        <option value="SG-DO: Rp 1.000">SG-DO - 3 HARI - Rp 1.000</option>
+        <option value="SG-DO: Rp 3.000">SG-DO - 7 HARI - Rp 3.000</option>
+        <option value="SG-DO: Rp 6.000">SG-DO - 15 HARI - Rp 6.000</option>
+        <option value="SG-DO: Rp 8.000">SG-DO - 30 HARI - Rp 8.000</option>
+        <option value="SG-DO: Rp 16.000">SG-DO - 60 HARI - Rp 16.000</option>
+    </optgroup>
+    <optgroup label="FREE TRIAL">
+        <option value="FREE TRIAL: FREE/Week">FREE TRIAL - 3 HARI - FREE/Week</option>
+        <option value="FREE TRIAL: FREE/Month">FREE TRIAL - 7 HARI - FREE/Month</option>
+    </optgroup>
+    <optgroup label="SG-VIP">
+        <option value="SG-VIP: Rp 3.000">SG-VIP - 3 HARI - Rp 3.000</option>
+        <option value="SG-VIP: Rp 6.000">SG-VIP - 7 HARI - Rp 6.000</option>
+        <option value="SG-VIP: Rp 9.000">SG-VIP - 15 HARI - Rp 9.000</option>
+        <option value="SG-VIP: Rp 12.000">SG-VIP - 30 HARI - Rp 12.000</option>
+        <option value="SG-VIP: Rp 25.000">SG-VIP - 60 HARI - Rp 25.000</option>
+    </optgroup>
+    <optgroup label="SG DO STB">
+        <option value="SG DO STB: Rp 1.750">SG DO STB - 3 HARI - Rp 1.750</option>
+        <option value="SG DO STB: Rp 2.000">SG DO STB - 7 HARI - Rp 2.000</option>
+        <option value="SG DO STB: Rp 3.500">SG DO STB - 15 HARI - Rp 3.500</option>
+        <option value="SG DO STB: Rp 5.000">SG DO STB - 22 HARI - Rp 5.000</option>
+        <option value="SG DO STB: Rp 7.000">SG DO STB - 30 HARI - Rp 7.000</option>
+        <option value="SG DO STB: Rp 15.000">SG DO STB - 60 HARI - Rp 15.000</option>
+    </optgroup>
+    <optgroup label="SG DO VIP STB">
+        <option value="SG DO VIP STB: Rp 2.000">SG DO VIP STB - 3 HARI - Rp 2.000</option>
+        <option value="SG DO VIP STB: Rp 3.500">SG DO VIP STB - 7 HARI - Rp 3.500</option>
+        <option value="SG DO VIP STB: Rp 5.000">SG DO VIP STB - 15 HARI - Rp 5.000</option>
+        <option value="SG DO VIP STB: Rp 7.000">SG DO VIP STB - 22 HARI - Rp 7.000</option>
+        <option value="SG DO VIP STB: Rp 10.000">SG DO VIP STB - 30 HARI - Rp 10.000</option>
+        <option value="SG DO VIP STB: Rp 20.000">SG DO VIP STB - 60 HARI - Rp 20.000</option>
+    </optgroup>
+    <optgroup label="SG RESSEL">
+        <option value="SG RESSEL: Rp 5.000">SG RESSEL - 30 HARI - Rp 5.000</option>
+        <option value="SG RESSEL: Rp 10.000">SG RESSEL - 60 HARI - Rp 10.000</option>
+    </optgroup>
+    <optgroup label="SG ALIBABA">
+        <option value="SG ALIBABA: Rp 10.000">SG ALIBABA - 1 TAHUN - Rp 10.000</option>
+    </optgroup>
+    <optgroup label="ID NUSA">
+        <option value="ID NUSA: Rp 3.500">ID NUSA - 3 HARI - Rp 3.500</option>
+        <option value="ID NUSA: Rp 5.000">ID NUSA - 7 HARI - Rp 5.000</option>
+        <option value="ID NUSA: Rp 7.000">ID NUSA - 15 HARI - Rp 7.000</option>
+        <option value="ID NUSA: Rp 10.000">ID NUSA - 22 HARI - Rp 10.000</option>
+        <option value="ID NUSA: Rp 12.000">ID NUSA - 30 HARI - Rp 12.000</option>
+        <option value="ID NUSA: Rp 24.000">ID NUSA - 60 HARI - Rp 24.000</option>
+    </optgroup>
+    <optgroup label="ID NUSA STB">
+        <option value="ID NUSA STB: Rp 5.000">ID NUSA STB - 3 HARI - Rp 5.000</option>
+        <option value="ID NUSA STB: Rp 7.000">ID NUSA STB - 7 HARI - Rp 7.000</option>
+        <option value="ID NUSA STB: Rp 10.000">ID NUSA STB - 15 HARI - Rp 10.000</option>
+        <option value="ID NUSA STB: Rp 12.000">ID NUSA STB - 22 HARI - Rp 12.000</option>
+        <option value="ID NUSA STB: Rp 14.000">ID NUSA STB - 30 HARI - Rp 14.000</option>
+        <option value="ID NUSA STB: Rp 25.000">ID NUSA STB - 60 HARI - Rp 25.000</option>
+    </optgroup>
+    <optgroup label="ID IKD STB">
+        <option value="ID IKD STB: Rp 3.500">ID IKD STB - 3 HARI - Rp 3.500</option>
+        <option value="ID IKD STB: Rp 5.000">ID IKD STB - 7 HARI - Rp 5.000</option>
+        <option value="ID IKD STB: Rp 7.000">ID IKD STB - 15 HARI - Rp 7.000</option>
+        <option value="ID IKD STB: Rp 10.000">ID IKD STB - 22 HARI - Rp 10.000</option>
+        <option value="ID IKD STB: Rp 12.000">ID IKD STB - 30 HARI - Rp 12.000</option>
+        <option value="ID IKD STB: Rp 24.000">ID IKD STB - 60 HARI - Rp 24.000</option>
+    </optgroup>
+</select>
             </div>
+            <p class="p-apk">Kuota yang akan dirubah: (Ceklis salah satu)</p>
+<ul>
+    <li><input type="checkbox" name="kuota" value="ISAT EDU"> ISAT EDU</li>
+    <li><input type="checkbox" name="kuota" value="TSEL ILPED"> TSEL ILPED</li>
+    <li><input type="checkbox" name="kuota" value="AXIS EDU"> AXIS EDU</li>
+    <li><input type="checkbox" name="kuota" value="AXIS GAME"> AXIS GAME</li>
+    <li><input type="checkbox" name="kuota" value="XL EDU"> XL EDU</li>
+    <li><input type="checkbox" name="kuota" value="XL FLEX"> XL FLEX</li>
+    <li><input type="checkbox" name="kuota" value="XL VIDEO"> XL VIDEO</li>
+    <li><input type="checkbox" name="kuota" value="XL VISION"> XL VISION</li>
+    <li><input type="checkbox" name="kuota" value="OPOK"> OPOK UDP SEMUA KARTU</li>
+    <li>LAIN NYA: <input type="text" name="kuota_lain" placeholder="Masukkan Kuota Lainnya"></li>
+</ul>
+<p class="p-apk">Request Aplikasi Inject: (Ceklis salah satu)</p>
+<ul> 
+    <li><input type="checkbox" name="aplikasi_inject" value="HTTP COSTUM"> HTTP COSTUM (Best)</li>
+    <li><input type="checkbox" name="aplikasi_inject" value="HTTP INJECTOR"> HTTP INJECTOR</li>
+    <li><input type="checkbox" name="aplikasi_inject" value="v2rayNG"> v2rayNG</li>
+    <li><input type="checkbox" name="aplikasi_inject" value="NekoBox"> NekoBox</li>
+    <li><input type="checkbox" name="aplikasi_inject" value="Kentang Injektor"> Kentang Injektor</li>
+    <li><input type="checkbox" name="aplikasi_inject" value="kentang clash"> kentang clash</li>
+    <li><input type="checkbox" name="aplikasi_inject" value="Kpn Tunnel"> Kpn Tunnel</li>
+    <li><input type="checkbox" name="aplikasi_inject" value="Drak Tunnel"> Drak Tunnel</li>
+    <li><input type="checkbox" name="aplikasi_inject" value="Npv Tunnel"> Npv Tunnel</li>
+    <li>LAIN NYA: <input type="text" name="inject_lain" placeholder="Masukkan Aplikasi Inject Lainnya"></li>
+</ul>
             <input type="hidden" name="phone" value="6285789987714">
             <input type="hidden" name="text" id="whatsappMessage">
             <button type="submit" class="send-button">Kirim ke WhatsApp</button>
@@ -100,20 +172,38 @@
 
     <!-- JavaScript untuk WhatsApp -->
     <script>
-        document.getElementById('orderForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // prevent default form submission
-            var name = document.getElementById('name').value;
-            var password = document.getElementById('password').value;
-            var protocol = document.getElementById('protocol').value;
-            var service = document.getElementById('service').value;
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Mencegah form dikirim secara default
 
-            var message = `╭─「  *DETAIL PEMBELIAN* 」\n│Nama:  ${name}\n│Password Akun:  ${password}\n│Protokol VPN:  ${protocol}\n│Layanan:  ${service} \n╰─────────────────`;
-            document.getElementById('whatsappMessage').value = message;
+        var name = document.getElementById('name').value;
+        var password = document.getElementById('password').value;
+        var protocol = document.getElementById('protocol').value;
+        var service = document.getElementById('service').value;
 
-            var encodedMessage = encodeURIComponent(message);
-            this.action = `https://api.whatsapp.com/send?phone=6282278687542&text=${encodedMessage}`;
-            window.open(this.action); // open WhatsApp in a new tab
-        });
-    </script>
+        // Ambil semua checkbox kuota yang dicentang
+        var kuota = Array.from(document.querySelectorAll('input[name="kuota"]:checked'))
+            .map(checkbox => checkbox.value).join(", ");
+
+        // Ambil semua checkbox aplikasi inject yang dicentang
+        var aplikasi_inject = Array.from(document.querySelectorAll('input[name="aplikasi_inject"]:checked'))
+            .map(checkbox => checkbox.value).join(", ");
+
+        // Pesan WhatsApp
+        var message = `╭─「  *DETAIL PEMBELIAN* 」\n` +
+                      `│Nama:  ${name}\n` +
+                      `│Password Akun:  ${password}\n` +
+                      `│Protokol VPN:  ${protocol}\n` +
+                      `│Layanan:  ${service}\n` +
+                      `│Kuota: ${kuota || "Tidak dipilih"}\n` +
+                      `│Aplikasi Inject: ${aplikasi_inject || "Tidak dipilih"}\n` +
+                      `╰─────────────────`;
+
+        document.getElementById('whatsappMessage').value = message;
+
+        var encodedMessage = encodeURIComponent(message);
+        this.action = `https://api.whatsapp.com/send?phone=6282278687542&text=${encodedMessage}`;
+        window.open(this.action); // Membuka WhatsApp di tab baru
+    });
+</script>
 </body>
 </html>

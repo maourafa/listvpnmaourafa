@@ -1,17 +1,22 @@
-/* Umum */
-body {
-    font-family: 'Poppins', sans-serif;
+/* Reset */
+body, h1, p, label, input, select, button {
     margin: 0;
     padding: 0;
-    background-color: #1e2a3b;
+    box-sizing: border-box;
+}
+
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1e2a3b;
     color: #f4f4f4;
 }
 
 header {
     background: linear-gradient(135deg, #ff5722, #ffcc00);
-    text-align: center;
     padding: 20px;
-    color: white;
+    text-align: center;
+    color: #fff;
 }
 
 .logo {
@@ -21,33 +26,37 @@ header {
 
 form {
     background: #273349;
-    padding: 30px;
-    max-width: 600px;
+    padding: 20px;
     margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
 }
 
 .form-group {
     margin-bottom: 15px;
 }
 
-.form-group label {
+label {
     display: block;
+    font-weight: 600;
     margin-bottom: 5px;
-    color: #ffcc00;
 }
 
-.form-group input, .form-group select {
+input, select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ffcc00;
     border-radius: 5px;
+    border: 1px solid #ffcc00;
     background: #1e2a3b;
     color: #f4f4f4;
 }
 
-button.send-button {
+input:focus, select:focus {
+    outline: none;
+    border-color: #ff5722;
+}
+
+button {
     width: 100%;
     padding: 15px;
     background: linear-gradient(90deg, #ff5722, #ffcc00);
@@ -56,20 +65,28 @@ button.send-button {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: transform 0.3s ease;
 }
 
-button.send-button:hover {
+button:hover {
+    background: linear-gradient(90deg, #ffcc00, #ff5722);
     transform: scale(1.05);
 }
+        /* Menghilangkan bullet point pada daftar */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-table {
-    width: 90%;
-    margin: 0 auto;
-    border-collapse: collapse;
-}
+        /* Menyesuaikan tampilan checkbox dan teks supaya sejajar */
+        ul li {
+            align-items: center;
+        }
 
-table td {
-    padding: 10px;
-    border: 1px solid #273349;
-}
+        ul li input[type="checkbox"] {
+            margin-right: 10px; /* Memberikan jarak antara checkbox dan teks */
+        }
+
+        /* Menambahkan margin pada input teks agar lebih rapi */
+        ul li input[type="text"] {
+            margin-left: 10px;
+        }
