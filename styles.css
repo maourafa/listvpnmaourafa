@@ -8,6 +8,38 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
+.hero {
+    position: relative;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.logo {
+    height: 160px;
+    border-radius: 15px;
+    width: auto;
+    margin-bottom: 0px;
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.subtitle {
+    margin: 10px 0 20px;
+}
 
 h1, h2, h3 {
     margin: 0 0 10px;
@@ -34,36 +66,6 @@ a:hover {
 .text-center {
     text-align: center;
 }
-
-/* Hero Section */
-.hero {
-    position: relative;
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    height: 100vh;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.overlay {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 15px;
-}
-
-.title {
-    font-size: 3em;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    margin: 10px 0 20px;
-    font-size: 1.2em;
-}
-
 .cta-button {
     background: linear-gradient(90deg, #ffcc00, #ff5722);
     color: #0d1117;
