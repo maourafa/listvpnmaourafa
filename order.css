@@ -90,3 +90,62 @@ button:hover {
         ul li input[type="text"] {
             margin-left: 10px;
         }
+        body, h1, p, label, input, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1e2a3b;
+    color: #f4f4f4;
+}
+
+.form-container {
+    background: #273349;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+/* Menghilangkan bullet point pada daftar */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Menyesuaikan tampilan checkbox dan teks */
+.checkbox-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Styling untuk label dan span */
+.checkbox-list label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.checkbox-list span {
+    flex-grow: 1;
+}
+
+/* Menyusun checkbox pada posisi tetap */
+.checkbox-list input[type="checkbox"] {
+    margin-left: 10px;
+    transform: scale(1.2); /* Memperbesar checkbox sedikit untuk konsistensi tampilan */
+}
+
+/* Menambahkan margin pada input teks agar lebih rapi */
+.checkbox-list input[type="text"] {
+    margin-left: 10px;
+    margin-top: 5px;
+    width: calc(100% - 20px);
+}
