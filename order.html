@@ -26,12 +26,13 @@
             <div class="form-group">
                 <label for="password">Password:</label>
                 <!-- Tambahkan minimal panjang karakter -->
-                <input type="password" id="password" name="password" placeholder="Masukkan password akun" minlength="6" title="Minimal 6 karakter" required>
+                <input type="password" id="password" name="password" placeholder="Masukkan password akun" minlength="3" title="Minimal 3 karakter" required>
             </div>
             <div class="form-group">
                 <label for="protocol">Protokol VPN:</label>
                 <select id="protocol" name="protocol" required>
                     <option value="">Pilih Protokol VPN</option>
+                    <option value="DI COCOKIN ADMIN">DI COCOKIN ADMIN</option>
                     <option value="SSH WEBSOCKET">SSH WS</option>
                     <option value="SSH SelowDNS">SSH SelowDNS</option>
                     <option value="OPEN SSH">OPEN SSH</option>
@@ -114,32 +115,35 @@
     </optgroup>
 </select>
             </div>
-            <p class="p-apk">Kuota yang akan dirubah: (Ceklis salah satu)</p>
-<ul>
-    <li><input type="checkbox" name="kuota" value="ISAT EDU"> ISAT EDU</li>
-    <li><input type="checkbox" name="kuota" value="TSEL ILPED"> TSEL ILPED</li>
-    <li><input type="checkbox" name="kuota" value="AXIS EDU"> AXIS EDU</li>
-    <li><input type="checkbox" name="kuota" value="AXIS GAME"> AXIS GAME</li>
-    <li><input type="checkbox" name="kuota" value="XL EDU"> XL EDU</li>
-    <li><input type="checkbox" name="kuota" value="XL FLEX"> XL FLEX</li>
-    <li><input type="checkbox" name="kuota" value="XL VIDEO"> XL VIDEO</li>
-    <li><input type="checkbox" name="kuota" value="XL VISION"> XL VISION</li>
-    <li><input type="checkbox" name="kuota" value="OPOK"> OPOK UDP SEMUA KARTU</li>
-    <li>LAIN NYA: <input type="text" name="kuota_lain" placeholder="Masukkan Kuota Lainnya"></li>
-</ul>
-<p class="p-apk">Request Aplikasi Inject: (Ceklis salah satu)</p>
-<ul> 
-    <li><input type="checkbox" name="aplikasi_inject" value="HTTP COSTUM"> HTTP COSTUM (Best)</li>
-    <li><input type="checkbox" name="aplikasi_inject" value="HTTP INJECTOR"> HTTP INJECTOR</li>
-    <li><input type="checkbox" name="aplikasi_inject" value="v2rayNG"> v2rayNG</li>
-    <li><input type="checkbox" name="aplikasi_inject" value="NekoBox"> NekoBox</li>
-    <li><input type="checkbox" name="aplikasi_inject" value="Kentang Injektor"> Kentang Injektor</li>
-    <li><input type="checkbox" name="aplikasi_inject" value="kentang clash"> kentang clash</li>
-    <li><input type="checkbox" name="aplikasi_inject" value="Kpn Tunnel"> Kpn Tunnel</li>
-    <li><input type="checkbox" name="aplikasi_inject" value="Drak Tunnel"> Drak Tunnel</li>
-    <li><input type="checkbox" name="aplikasi_inject" value="Npv Tunnel"> Npv Tunnel</li>
-    <li>LAIN NYA: <input type="text" name="inject_lain" placeholder="Masukkan Aplikasi Inject Lainnya"></li>
-</ul>
+
+<div class="form-container">
+    <p class="p-apk">Kuota yang akan dirubah: (Ceklis salah satu)</p>
+    <ul class="checkbox-list">
+        <li><label>ISAT EDU <input type="checkbox" name="kuota" value="ISAT EDU"></label></li>
+        <li><label>TSEL ILPED <input type="checkbox" name="kuota" value="TSEL ILPED"></label></li>
+        <li><label>AXIS EDU <input type="checkbox" name="kuota" value="AXIS EDU"></label></li>
+        <li><label>AXIS GAME <input type="checkbox" name="kuota" value="AXIS GAME"></label></li>
+        <li><label>XL EDU <input type="checkbox" name="kuota" value="XL EDU"></label></li>
+        <li><label>XL FLEX <input type="checkbox" name="kuota" value="XL FLEX"></label></li>
+        <li><label>XL VIDEO <input type="checkbox" name="kuota" value="XL VIDEO"></label></li>
+        <li><label>XL VISION <input type="checkbox" name="kuota" value="XL VISION"></label></li>
+        <li><label>OPOK UDP SEMUA KARTU <input type="checkbox" name="kuota" value="OPOK"></label></li>
+        <li>LAIN NYA: <input type="text" name="kuota_lain" placeholder="Masukkan Kuota Lainnya"></li>
+    </ul>
+    <p class="p-apk">Request Aplikasi Inject: (Ceklis salah satu)</p>
+    <ul class="checkbox-list"> 
+        <li><label>HTTP COSTUM (Best) <input type="checkbox" name="aplikasi_inject" value="HTTP COSTUM"></label></li>
+        <li><label>HTTP INJECTOR <input type="checkbox" name="aplikasi_inject" value="HTTP INJECTOR"></label></li>
+        <li><label>v2rayNG <input type="checkbox" name="aplikasi_inject" value="v2rayNG"></label></li>
+        <li><label>NekoBox <input type="checkbox" name="aplikasi_inject" value="NekoBox"></label></li>
+        <li><label>Kentang Injektor <input type="checkbox" name="aplikasi_inject" value="Kentang Injektor"></label></li>
+        <li><label>kentang clash <input type="checkbox" name="aplikasi_inject" value="kentang clash"></label></li>
+        <li><label>Kpn Tunnel <input type="checkbox" name="aplikasi_inject" value="Kpn Tunnel"></label></li>
+        <li><label>Drak Tunnel <input type="checkbox" name="aplikasi_inject" value="Drak Tunnel"></label></li>
+        <li><label>Npv Tunnel <input type="checkbox" name="aplikasi_inject" value="Npv Tunnel"></label></li>
+        <li>LAIN NYA: <input type="text" name="inject_lain" placeholder="Masukkan Aplikasi Inject Lainnya"></li>
+    </ul>
+</div>
             <input type="hidden" name="phone" value="6285789987714">
             <input type="hidden" name="text" id="whatsappMessage">
             <button type="submit" class="send-button">Kirim ke WhatsApp</button>
