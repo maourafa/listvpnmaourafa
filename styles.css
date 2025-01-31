@@ -318,7 +318,10 @@ footer p {
 }
 
 .discount-price {
-     color:green;
+     color:#49ff49;
      /* Warna hijau untuk harga diskon */
     font-weight: bold; /* Menebalkan teks harga diskon */
+}
+.dis {
+     color:#5dff52;
 }
