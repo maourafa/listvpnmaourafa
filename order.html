@@ -9,170 +9,226 @@
     <link rel="stylesheet" href="order.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <img src="https://sm.ign.com/t/ign_in/screenshot/default/1-eis-pc-launch_brze.1280.png" alt="Logo" class="logo">
-        <h1>PESAN SEKARANG</h1>
-    </header>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <img src="https://sm.ign.com/t/ign_in/screenshot/default/1-eis-pc-launch_brze.1280.png" alt="Logo" class="logo">
+            <h1>PESAN SEKARANG</h1>
+        </header>
 
-    <!-- Form Pesanan -->
-    <main>
-        <form id="orderForm" action="https://api.whatsapp.com/send" method="get">
-            <div class="form-group">
-                <label for="name">Nama:</label>
-                <!-- Tambahkan placeholder -->
-                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" pattern="[A-Za-z ]+" title="Hanya boleh huruf" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <!-- Tambahkan minimal panjang karakter -->
-                <input type="password" id="password" name="password" placeholder="Masukkan password akun" minlength="3" title="Minimal 3 karakter" required>
-            </div>
-            <div class="form-group">
-                <label for="protocol">Protokol VPN:</label>
-                <select id="protocol" name="protocol" required>
-                    <option value="">Pilih Protokol VPN</option>
-                    <option value="DI COCOKIN ADMIN">DI COCOKIN ADMIN</option>
-                    <option value="SSH WEBSOCKET">SSH WS</option>
-                    <option value="SSH SelowDNS">SSH SelowDNS</option>
-                    <option value="OPEN SSH">OPEN SSH</option>
-                    <option value="SSH UDP">SSH UDP</option>
-                    <option value="Xray/Vmess">Xray/Vmess</option>
-                    <option value="Xray/Vless">Xray/Vless</option>
-                    <option value="Trojan">Trojan</option>
-                    <option value="ShadowsocksR">ShadowsocksR</option>
-                    <option value="Shadowsocks-Libev">Shadowsocks-Libev</option>
-                    <option value="NoobVpn">NOOB VPN</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="service">Pilih Layanan:</label>
-<select id="service" name="service">
-    <optgroup label="SG-DO">
-        <option value="SG-DO: Rp 1.000">SG-DO - 3 HARI - Rp 1.000</option>
-        <option value="SG-DO: Rp 3.000">SG-DO - 7 HARI - Rp 3.000</option>
-        <option value="SG-DO: Rp 6.000">SG-DO - 15 HARI - Rp 6.000</option>
-        <option value="SG-DO: Rp 5.000">SG-DO - 30 HARI - Rp 5.000</option>
-        <option value="SG-DO: Rp 16.000">SG-DO - 60 HARI - Rp 16.000</option>
-    </optgroup>
-    <optgroup label="FREE TRIAL">
-        <option value="FREE TRIAL: FREE/Week">FREE TRIAL - 3 HARI - FREE/Week</option>
-        <option value="FREE TRIAL: FREE/Month">FREE TRIAL - 7 HARI - FREE/Month</option>
-    </optgroup>
-    <optgroup label="SG-VIP">
-        <option value="SG-VIP: Rp 3.000">SG-VIP - 3 HARI - Rp 3.000</option>
-        <option value="SG-VIP: Rp 6.000">SG-VIP - 7 HARI - Rp 6.000</option>
-        <option value="SG-VIP: Rp 9.000">SG-VIP - 15 HARI - Rp 9.000</option>
-        <option value="SG-VIP: Rp 12.000">SG-VIP - 30 HARI - Rp 12.000</option>
-        <option value="SG-VIP: Rp 25.000">SG-VIP - 60 HARI - Rp 25.000</option>
-    </optgroup>
-    <optgroup label="SG DO STB">
-        <option value="SG DO STB: Rp 1.750">SG DO STB - 3 HARI - Rp 1.750</option>
-        <option value="SG DO STB: Rp 2.000">SG DO STB - 7 HARI - Rp 2.000</option>
-        <option value="SG DO STB: Rp 3.500">SG DO STB - 15 HARI - Rp 3.500</option>
-        <option value="SG DO STB: Rp 5.000">SG DO STB - 22 HARI - Rp 5.000</option>
-        <option value="SG DO STB: Rp 7.000">SG DO STB - 30 HARI - Rp 7.000</option>
-        <option value="SG DO STB: Rp 15.000">SG DO STB - 60 HARI - Rp 15.000</option>
-    </optgroup>
-    <optgroup label="SG DO VIP STB">
-        <option value="SG DO VIP STB: Rp 2.000">SG DO VIP STB - 3 HARI - Rp 2.000</option>
-        <option value="SG DO VIP STB: Rp 3.500">SG DO VIP STB - 7 HARI - Rp 3.500</option>
-        <option value="SG DO VIP STB: Rp 5.000">SG DO VIP STB - 15 HARI - Rp 5.000</option>
-        <option value="SG DO VIP STB: Rp 7.000">SG DO VIP STB - 22 HARI - Rp 7.000</option>
-        <option value="SG DO VIP STB: Rp 10.000">SG DO VIP STB - 30 HARI - Rp 10.000</option>
-        <option value="SG DO VIP STB: Rp 20.000">SG DO VIP STB - 60 HARI - Rp 20.000</option>
-    </optgroup>
-    <optgroup label="SG RESSEL">
-        <option value="SG RESSEL: Rp 5.000">SG RESSEL - 30 HARI - Rp 5.000</option>
-        <option value="SG RESSEL: Rp 10.000">SG RESSEL - 60 HARI - Rp 10.000</option>
-    </optgroup>
-    <optgroup label="SG ALIBABA">
-        <option value="SG ALIBABA: Rp 10.000">SG ALIBABA - 1 TAHUN - Rp 10.000</option>
-    </optgroup>
-    <optgroup label="ID NUSA">
-        <option value="ID NUSA: Rp 3.500">ID NUSA - 3 HARI - Rp 3.500</option>
-        <option value="ID NUSA: Rp 5.000">ID NUSA - 7 HARI - Rp 5.000</option>
-        <option value="ID NUSA: Rp 7.000">ID NUSA - 15 HARI - Rp 7.000</option>
-        <option value="ID NUSA: Rp 10.000">ID NUSA - 22 HARI - Rp 10.000</option>
-        <option value="ID NUSA: Rp 12.000">ID NUSA - 30 HARI - Rp 12.000</option>
-        <option value="ID NUSA: Rp 24.000">ID NUSA - 60 HARI - Rp 24.000</option>
-    </optgroup>
-    <optgroup label="ID NUSA STB">
-        <option value="ID NUSA STB: Rp 5.000">ID NUSA STB - 3 HARI - Rp 5.000</option>
-        <option value="ID NUSA STB: Rp 7.000">ID NUSA STB - 7 HARI - Rp 7.000</option>
-        <option value="ID NUSA STB: Rp 10.000">ID NUSA STB - 15 HARI - Rp 10.000</option>
-        <option value="ID NUSA STB: Rp 12.000">ID NUSA STB - 22 HARI - Rp 12.000</option>
-        <option value="ID NUSA STB: Rp 14.000">ID NUSA STB - 30 HARI - Rp 14.000</option>
-        <option value="ID NUSA STB: Rp 25.000">ID NUSA STB - 60 HARI - Rp 25.000</option>
-    </optgroup>
-    <optgroup label="ID IKD STB">
-        <option value="ID IKD STB: Rp 3.500">ID IKD STB - 3 HARI - Rp 3.500</option>
-        <option value="ID IKD STB: Rp 5.000">ID IKD STB - 7 HARI - Rp 5.000</option>
-        <option value="ID IKD STB: Rp 7.000">ID IKD STB - 15 HARI - Rp 7.000</option>
-        <option value="ID IKD STB: Rp 10.000">ID IKD STB - 22 HARI - Rp 10.000</option>
-        <option value="ID IKD STB: Rp 12.000">ID IKD STB - 30 HARI - Rp 12.000</option>
-        <option value="ID IKD STB: Rp 24.000">ID IKD STB - 60 HARI - Rp 24.000</option>
-    </optgroup>
-</select>
-            </div>
+        <!-- Main Content -->
+        <div class="content-wrapper">
+            <!-- Form Section -->
+            <section class="form-section">
+                <form id="orderForm" action="https://api.whatsapp.com/send" method="get">
+                    <table class="form-table">
+                        <tr>
+                            <td colspan="2">
+                                <div class="form-group">
+                                    <label for="name">Nama:</label>
+                                    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" pattern="[A-Za-z ]+" title="Hanya boleh huruf" required>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="form-group">
+                                    <label for="password">Password:</label>
+                                    <input type="password" id="password" name="password" placeholder="Masukkan password akun" minlength="3" title="Minimal 3 karakter" required>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="form-group">
+                                    <label for="protocol">Protokol VPN:</label>
+                                    <select id="protocol" name="protocol" required>
+                                        <option value="">Pilih Protokol VPN</option>
+                                        <option value="DI COCOKIN ADMIN">DI COCOKIN ADMIN</option>
+                                        <option value="SSH WEBSOCKET">SSH WS</option>
+                                        <option value="SSH SelowDNS">SSH SelowDNS</option>
+                                        <option value="OPEN SSH">OPEN SSH</option>
+                                        <option value="SSH UDP">SSH UDP</option>
+                                        <option value="Xray/Vmess">Xray/Vmess</option>
+                                        <option value="Xray/Vless">Xray/Vless</option>
+                                        <option value="Trojan">Trojan</option>
+                                        <option value="ShadowsocksR">ShadowsocksR</option>
+                                        <option value="Shadowsocks-Libev">Shadowsocks-Libev</option>
+                                        <option value="NoobVpn">NOOB VPN</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="form-group">
+                                    <label for="service">Pilih Layanan:</label>
+                                    <select id="service" name="service">
+                                        <optgroup label="SG-DO">
+                                            <option value="SG-DO: Rp 1.000">SG-DO - 3 HARI - Rp 1.000</option>
+                                            <option value="SG-DO: Rp 3.000">SG-DO - 7 HARI - Rp 3.000</option>
+                                            <option value="SG-DO: Rp 6.000">SG-DO - 15 HARI - Rp 6.000</option>
+                                            <option value="SG-DO: Rp 5.000">SG-DO - 30 HARI - Rp 5.000</option>
+                                            <option value="SG-DO: Rp 16.000">SG-DO - 60 HARI - Rp 16.000</option>
+                                        </optgroup>
+                                        <optgroup label="FREE TRIAL">
+                                            <option value="FREE TRIAL: FREE/Week">FREE TRIAL - 3 HARI - FREE/Week</option>
+                                            <option value="FREE TRIAL: FREE/Month">FREE TRIAL - 7 HARI - FREE/Month</option>
+                                        </optgroup>
+                                        <optgroup label="SG-VIP">
+                                            <option value="SG-VIP: Rp 3.000">SG-VIP - 3 HARI - Rp 3.000</option>
+                                            <option value="SG-VIP: Rp 6.000">SG-VIP - 7 HARI - Rp 6.000</option>
+                                            <option value="SG-VIP: Rp 9.000">SG-VIP - 15 HARI - Rp 9.000</option>
+                                            <option value="SG-VIP: Rp 12.000">SG-VIP - 30 HARI - Rp 12.000</option>
+                                            <option value="SG-VIP: Rp 25.000">SG-VIP - 60 HARI - Rp 25.000</option>
+                                        </optgroup>
+                                        <optgroup label="SG DO STB">
+                                            <option value="SG DO STB: Rp 1.750">SG DO STB - 3 HARI - Rp 1.750</option>
+                                            <option value="SG DO STB: Rp 2.000">SG DO STB - 7 HARI - Rp 2.000</option>
+                                            <option value="SG DO STB: Rp 3.500">SG DO STB - 15 HARI - Rp 3.500</option>
+                                            <option value="SG DO STB: Rp 5.000">SG DO STB - 22 HARI - Rp 5.000</option>
+                                            <option value="SG DO STB: Rp 7.000">SG DO STB - 30 HARI - Rp 7.000</option>
+                                            <option value="SG DO STB: Rp 15.000">SG DO STB - 60 HARI - Rp 15.000</option>
+                                        </optgroup>
+                                        <optgroup label="SG DO VIP STB">
+                                            <option value="SG DO VIP STB: Rp 2.000">SG DO VIP STB - 3 HARI - Rp 2.000</option>
+                                            <option value="SG DO VIP STB: Rp 3.500">SG DO VIP STB - 7 HARI - Rp 3.500</option>
+                                            <option value="SG DO VIP STB: Rp 5.000">SG DO VIP STB - 15 HARI - Rp 5.000</option>
+                                            <option value="SG DO VIP STB: Rp 7.000">SG DO VIP STB - 22 HARI - Rp 7.000</option>
+                                            <option value="SG DO VIP STB: Rp 10.000">SG DO VIP STB - 30 HARI - Rp 10.000</option>
+                                            <option value="SG DO VIP STB: Rp 20.000">SG DO VIP STB - 60 HARI - Rp 20.000</option>
+                                        </optgroup>
+                                        <optgroup label="SG RESSEL">
+                                            <option value="SG RESSEL: Rp 5.000">SG RESSEL - 30 HARI - Rp 5.000</option>
+                                            <option value="SG RESSEL: Rp 10.000">SG RESSEL - 60 HARI - Rp 10.000</option>
+                                        </optgroup>
+                                        <optgroup label="SG ALIBABA">
+                                            <option value="SG ALIBABA: Rp 10.000">SG ALIBABA - 1 TAHUN - Rp 10.000</option>
+                                        </optgroup>
+                                        <optgroup label="ID NUSA">
+                                            <option value="ID NUSA: Rp 3.500">ID NUSA - 3 HARI - Rp 3.500</option>
+                                            <option value="ID NUSA: Rp 5.000">ID NUSA - 7 HARI - Rp 5.000</option>
+                                            <option value="ID NUSA: Rp 7.000">ID NUSA - 15 HARI - Rp 7.000</option>
+                                            <option value="ID NUSA: Rp 10.000">ID NUSA - 22 HARI - Rp 10.000</option>
+                                            <option value="ID NUSA: Rp 12.000">ID NUSA - 30 HARI - Rp 12.000</option>
+                                            <option value="ID NUSA: Rp 24.000">ID NUSA - 60 HARI - Rp 24.000</option>
+                                        </optgroup>
+                                        <optgroup label="ID NUSA STB">
+                                            <option value="ID NUSA STB: Rp 5.000">ID NUSA STB - 3 HARI - Rp 5.000</option>
+                                            <option value="ID NUSA STB: Rp 7.000">ID NUSA STB - 7 HARI - Rp 7.000</option>
+                                            <option value="ID NUSA STB: Rp 10.000">ID NUSA STB - 15 HARI - Rp 10.000</option>
+                                            <option value="ID NUSA STB: Rp 12.000">ID NUSA STB - 22 HARI - Rp 12.000</option>
+                                            <option value="ID NUSA STB: Rp 14.000">ID NUSA STB - 30 HARI - Rp 14.000</option>
+                                            <option value="ID NUSA STB: Rp 25.000">ID NUSA STB - 60 HARI - Rp 25.000</option>
+                                        </optgroup>
+                                        <optgroup label="ID IKD STB">
+                                            <option value="ID IKD STB: Rp 3.500">ID IKD STB - 3 HARI - Rp 3.500</option>
+                                            <option value="ID IKD STB: Rp 5.000">ID IKD STB - 7 HARI - Rp 5.000</option>
+                                            <option value="ID IKD STB: Rp 7.000">ID IKD STB - 15 HARI - Rp 7.000</option>
+                                            <option value="ID IKD STB: Rp 10.000">ID IKD STB - 22 HARI - Rp 10.000</option>
+                                            <option value="ID IKD STB: Rp 12.000">ID IKD STB - 30 HARI - Rp 12.000</option>
+                                            <option value="ID IKD STB: Rp 24.000">ID IKD STB - 60 HARI - Rp 24.000</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="form-container">
+                                    <p class="section-title">Kuota yang akan dirubah: (Ceklis salah satu)</p>
+                                    <table class="checkbox-table">
+                                        <tr>
+                                            <td><label><input type="checkbox" name="kuota" value="ISAT EDU"> ISAT EDU</label></td>
+                                            <td><label><input type="checkbox" name="kuota" value="TSEL ILPED"> TSEL ILPED</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label><input type="checkbox" name="kuota" value="AXIS EDU"> AXIS EDU</label></td>
+                                            <td><label><input type="checkbox" name="kuota" value="AXIS GAME"> AXIS GAME</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label><input type="checkbox" name="kuota" value="XL EDU"> XL EDU</label></td>
+                                            <td><label><input type="checkbox" name="kuota" value="XL FLEX"> XL FLEX</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label><input type="checkbox" name="kuota" value="XL VIDEO"> XL VIDEO</label></td>
+                                            <td><label><input type="checkbox" name="kuota" value="XL VISION"> XL VISION</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><label><input type="checkbox" name="kuota" value="OPOK"> OPOK UDP SEMUA KARTU</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">LAIN NYA: <input type="text" name="kuota_lain" placeholder="Masukkan Kuota Lainnya"></td>
+                                        </tr>
+                                    </table>
+                                    
+                                    <p class="section-title">Request Aplikasi Inject: (Ceklis salah satu)</p>
+                                    <table class="checkbox-table">
+                                        <tr>
+                                            <td><label><input type="checkbox" name="aplikasi_inject" value="HTTP COSTUM"> HTTP COSTUM (Best)</label></td>
+                                            <td><label><input type="checkbox" name="aplikasi_inject" value="HTTP INJECTOR"> HTTP INJECTOR</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label><input type="checkbox" name="aplikasi_inject" value="v2rayNG"> v2rayNG</label></td>
+                                            <td><label><input type="checkbox" name="aplikasi_inject" value="NekoBox"> NekoBox</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label><input type="checkbox" name="aplikasi_inject" value="Kentang Injektor"> Kentang Injektor</label></td>
+                                            <td><label><input type="checkbox" name="aplikasi_inject" value="kentang clash"> kentang clash</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label><input type="checkbox" name="aplikasi_inject" value="Kpn Tunnel"> Kpn Tunnel</label></td>
+                                            <td><label><input type="checkbox" name="aplikasi_inject" value="Drak Tunnel"> Drak Tunnel</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label><input type="checkbox" name="aplikasi_inject" value="Npv Tunnel"> Npv Tunnel</label></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">LAIN NYA: <input type="text" name="inject_lain" placeholder="Masukkan Aplikasi Inject Lainnya"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="hidden" name="phone" value="6285789987714">
+                                <input type="hidden" name="text" id="whatsappMessage">
+                                <button type="submit" class="send-button">Kirim ke WhatsApp</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </section>
 
-<div class="form-container">
-    <p class="p-apk">Kuota yang akan dirubah: (Ceklis salah satu)</p>
-    <ul class="checkbox-list">
-        <li><label>ISAT EDU <input type="checkbox" name="kuota" value="ISAT EDU"></label></li>
-        <li><label>TSEL ILPED <input type="checkbox" name="kuota" value="TSEL ILPED"></label></li>
-        <li><label>AXIS EDU <input type="checkbox" name="kuota" value="AXIS EDU"></label></li>
-        <li><label>AXIS GAME <input type="checkbox" name="kuota" value="AXIS GAME"></label></li>
-        <li><label>XL EDU <input type="checkbox" name="kuota" value="XL EDU"></label></li>
-        <li><label>XL FLEX <input type="checkbox" name="kuota" value="XL FLEX"></label></li>
-        <li><label>XL VIDEO <input type="checkbox" name="kuota" value="XL VIDEO"></label></li>
-        <li><label>XL VISION <input type="checkbox" name="kuota" value="XL VISION"></label></li>
-        <li><label>OPOK UDP SEMUA KARTU <input type="checkbox" name="kuota" value="OPOK"></label></li>
-        <li>LAIN NYA: <input type="text" name="kuota_lain" placeholder="Masukkan Kuota Lainnya"></li>
-    </ul>
-    <p class="p-apk">Request Aplikasi Inject: (Ceklis salah satu)</p>
-    <ul class="checkbox-list"> 
-        <li><label>HTTP COSTUM (Best) <input type="checkbox" name="aplikasi_inject" value="HTTP COSTUM"></label></li>
-        <li><label>HTTP INJECTOR <input type="checkbox" name="aplikasi_inject" value="HTTP INJECTOR"></label></li>
-        <li><label>v2rayNG <input type="checkbox" name="aplikasi_inject" value="v2rayNG"></label></li>
-        <li><label>NekoBox <input type="checkbox" name="aplikasi_inject" value="NekoBox"></label></li>
-        <li><label>Kentang Injektor <input type="checkbox" name="aplikasi_inject" value="Kentang Injektor"></label></li>
-        <li><label>kentang clash <input type="checkbox" name="aplikasi_inject" value="kentang clash"></label></li>
-        <li><label>Kpn Tunnel <input type="checkbox" name="aplikasi_inject" value="Kpn Tunnel"></label></li>
-        <li><label>Drak Tunnel <input type="checkbox" name="aplikasi_inject" value="Drak Tunnel"></label></li>
-        <li><label>Npv Tunnel <input type="checkbox" name="aplikasi_inject" value="Npv Tunnel"></label></li>
-        <li>LAIN NYA: <input type="text" name="inject_lain" placeholder="Masukkan Aplikasi Inject Lainnya"></li>
-    </ul>
-</div>
-            <input type="hidden" name="phone" value="6285789987714">
-            <input type="hidden" name="text" id="whatsappMessage">
-            <button type="submit" class="send-button">Kirim ke WhatsApp</button>
-        </form>
-    </main>
+            <!-- Info Section -->
+            <section class="info-section">
+                <div class="warning">
+                    <h2>Cara Pengisian</h2>
+                    <table class="info-table">
+                        <tr>
+                            <td><strong>Nama:</strong></td>
+                            <td>Nama untuk user VPN Anda</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Password:</strong></td>
+                            <td>Password untuk akun VPN (SSH)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Protokol:</strong></td>
+                            <td>Jenis akun VPN (SSH, VMESS, VLESS, dsb.)</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
 
-    <!-- Informasi dan Cara Pengisian -->
-    <div class="warning">
-        <h2>Cara Pengisian</h2>
-        <table>
-            <tr>
-                <td><strong>Nama:</strong></td>
-                <td>Nama untuk user VPN Anda</td>
-            </tr>
-            <tr>
-                <td><strong>Password:</strong></td>
-                <td>Password untuk akun VPN (SSH)</td>
-            </tr>
-            <tr>
-                <td><strong>Protokol:</strong></td>
-                <td>Jenis akun VPN (SSH, VMESS, VLESS, dsb.)</td>
-            </tr>
-        </table>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; SETELAH DIKIRIM SS PAY DAN AKAN KAMI PROSES</p>
+        </footer>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; SETELAH DIKIRIM SS PAY DAN AKAN KAMI PROSES</p>
-    </footer>
 
     <!-- JavaScript untuk WhatsApp -->
     <script>
@@ -208,6 +264,6 @@
         this.action = `https://api.whatsapp.com/send?phone=6282278687542&text=${encodedMessage}`;
         window.open(this.action); // Membuka WhatsApp di tab baru
     });
-</script>
+    </script>
 </body>
 </html>
