@@ -1,5 +1,5 @@
 /* Reset */
-body, h1, p, label, input, select, button {
+body, h1, h2, p, label, input, select, button, table, tr, td {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,26 +10,56 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #1e2a3b;
     color: #f4f4f4;
+    line-height: 1.6;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
 header {
     background: linear-gradient(135deg, #ff5722, #ffcc00);
     padding: 20px;
     text-align: center;
     color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .logo {
     max-width: 350px;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-form {
-    background: #273349;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 600px;
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-section {
+    flex: 2;
+    min-width: 300px;
+}
+
+.info-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Form Styles */
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td {
+    padding: 5px;
 }
 
 .form-group {
@@ -56,7 +86,73 @@ input:focus, select:focus {
     border-color: #ff5722;
 }
 
-button {
+/* Checkbox Tables */
+.checkbox-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.checkbox-table td {
+    padding: 8px;
+    vertical-align: middle;
+}
+
+.checkbox-table label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+.checkbox-table input[type="checkbox"] {
+    width: auto;
+    transform: scale(1.2);
+}
+
+.checkbox-table input[type="text"] {
+    margin-left: 10px;
+    width: calc(100% - 20px);
+}
+
+.section-title {
+    font-weight: 600;
+    margin: 15px 0 5px;
+    color: #ffcc00;
+}
+
+/* Info Section */
+.warning {
+    background: #273349;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.warning h2 {
+    color: #ff5722;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-table td {
+    padding: 8px;
+    border-bottom: 1px solid #3a4a63;
+}
+
+.info-table td:first-child {
+    width: 30%;
+    font-weight: 600;
+    color: #ffcc00;
+}
+
+/* Button */
+.send-button {
     width: 100%;
     padding: 15px;
     background: linear-gradient(90deg, #ff5722, #ffcc00);
@@ -65,87 +161,31 @@ button {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
 }
 
-button:hover {
+.send-button:hover {
     background: linear-gradient(90deg, #ffcc00, #ff5722);
-    transform: scale(1.05);
-}
-        /* Menghilangkan bullet point pada daftar */
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        /* Menyesuaikan tampilan checkbox dan teks supaya sejajar */
-        ul li {
-            align-items: center;
-        }
-
-        ul li input[type="checkbox"] {
-            margin-right: 10px; /* Memberikan jarak antara checkbox dan teks */
-        }
-
-        /* Menambahkan margin pada input teks agar lebih rapi */
-        ul li input[type="text"] {
-            margin-left: 10px;
-        }
-        body, h1, p, label, input, select, button {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    transform: scale(1.02);
 }
 
-/* General */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #1e2a3b;
-    color: #f4f4f4;
-}
-
-.form-container {
-    background: #273349;
+/* Footer */
+footer {
+    text-align: center;
     padding: 20px;
-    margin: 20px auto;
+    background: #273349;
     border-radius: 10px;
-    max-width: 600px;
+    margin-top: 20px;
 }
 
-/* Menghilangkan bullet point pada daftar */
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-/* Menyesuaikan tampilan checkbox dan teks */
-.checkbox-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-/* Styling untuk label dan span */
-.checkbox-list label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.checkbox-list span {
-    flex-grow: 1;
-}
-
-/* Menyusun checkbox pada posisi tetap */
-.checkbox-list input[type="checkbox"] {
-    margin-left: 10px;
-    transform: scale(1.2); /* Memperbesar checkbox sedikit untuk konsistensi tampilan */
-}
-
-/* Menambahkan margin pada input teks agar lebih rapi */
-.checkbox-list input[type="text"] {
-    margin-left: 10px;
-    margin-top: 5px;
-    width: calc(100% - 20px);
+/* Responsive */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .form-section, .info-section {
+        width: 100%;
+    }
 }
