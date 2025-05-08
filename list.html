@@ -4,209 +4,380 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VPN Premium - Harga dan Fitur</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-         <div class="geserc">
-        <div class="geser">SILAHKAN TRIAL UNTUK CEK ATAU TESTING | 100% CASHBACK JIKA VPN BERMASALAH | BISA GANTI BUG ATAU PROTOKOL | SYARAT KETENTUAN BERLAKU</div>
+    <div class="container">
+        <!-- Scrolling Banner -->
+        <div class="scrolling-banner">
+            <div class="banner-text">SILAHKAN TRIAL UNTUK CEK ATAU TESTING | 100% CASHBACK JIKA VPN BERMASALAH | BISA GANTI BUG ATAU PROTOKOL | SYARAT KETENTUAN BERLAKU</div>
         </div>
-        <!-- Pricing Section -->
-        <section id="pricing" class="pricing-section">
-            <h2 class="section-title">Daftar Harga VPN</h2>
-            <div class="item-container">
-                 
-                    <!-- Card SG-ID -->
-                    <div class="card">
-                        <h3 class="card-title">SG-DO 1-IP 200GB</h3>
-                        <ul class="card-list">
-                            <li class="pricing-item">
-                                <span class="duration">3 HARI</span>
-                                <span class="price">Rp 1.000</span>
-                            </li>
-                            <li class="pricing-item">
-                                <span class="duration">7 HARI</span>
-                                <span class="price">Rp 3.000</span>
-                            </li>
-                            <li class="pricing-item">
-                                <span class="duration">15 HARI</span>
-                                <span class="price">Rp 6.000</span>
-                            </li>
-                            <li class="pricing-item">
-                                <span class="duration">30 HARI</span>
-                                <span class="price">Rp 8.000</span>
-                            </li>
-                            <li class="pricing-item">
-                                <span class="original-price">60 HARI</span>
-                                <span class="original-price">Rp 16.000 SOLD</span>
-                            </li>
-                        </ul>
-                        <a href="order.html" class="card-button">Beli Sekarang</a>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Pricing Section -->
+            <section class="pricing-section">
+                <h2 class="section-title">Daftar Harga VPN</h2>
+                
+                <div class="pricing-grid">
+                    <!-- SG-DO Card -->
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3 class="card-title">SG-DO 1-IP 200GB</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="pricing-table">
+                                <tr>
+                                    <td>3 HARI</td>
+                                    <td class="price">Rp 1.000</td>
+                                </tr>
+                                <tr>
+                                    <td>7 HARI</td>
+                                    <td class="price">Rp 3.000</td>
+                                </tr>
+                                <tr>
+                                    <td>15 HARI</td>
+                                    <td class="price">Rp 6.000</td>
+                                </tr>
+                                <tr>
+                                    <td>30 HARI</td>
+                                    <td class="price">Rp 8.000</td>
+                                </tr>
+                                <tr>
+                                    <td>60 HARI</td>
+                                    <td class="original-price">Rp 16.000 SOLD</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <a href="order.html" class="order-button">Beli Sekarang</a>
+                        </div>
                     </div>
-                    <!--Free-->
-                 <div class="free">
-                    <h3 class="card-title">FREE TRIAL</h3>
-                    <ul class="card-list">
-        <li class="pricing-item">
-            <span class="duration">3 HARI</span>
-            <span class="price">FREE TEST</span>
-        </li>
-        <li class="pricing-item">
-            <span class="duration">7 HARI</span>
-            <span class="price">FREE TEST</span>
-        </li>
-                    </ul>
-                    <a href="order.html" class="card-button">Beli Sekarang</a>
+
+                    <!-- Free Trial Card -->
+                    <div class="pricing-card free-trial">
+                        <div class="card-header">
+                            <h3 class="card-title">FREE TRIAL</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="pricing-table">
+                                <tr>
+                                    <td>3 HARI</td>
+                                    <td class="price">FREE TEST</td>
+                                </tr>
+                                <tr>
+                                    <td>7 HARI</td>
+                                    <td class="price">FREE TEST</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <a href="order.html" class="order-button">Beli Sekarang</a>
+                        </div>
+                    </div>
+
+                    <!-- SG-VIP Card -->
+                    <div class="pricing-card premium">
+                        <div class="card-header">
+                            <h3 class="card-title">SG-VIP 2-IP Unlimited</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="pricing-table">
+                                <tr>
+                                    <td>3 HARI</td>
+                                    <td class="price">Rp 3.000</td>
+                                </tr>
+                                <tr>
+                                    <td>7 HARI</td>
+                                    <td class="price">Rp 6.000</td>
+                                </tr>
+                                <tr>
+                                    <td>15 HARI</td>
+                                    <td class="price">Rp 9.000</td>
+                                </tr>
+                                <tr>
+                                    <td>30 HARI</td>
+                                    <td><span class="discount-tag">DISKON</span> <span class="discount-price">Rp 10.000</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <a href="order.html" class="order-button">Beli Sekarang</a>
+                        </div>
+                    </div>
+
+                    <!-- SG STB Card -->
+                    <div class="pricing-card stb">
+                        <div class="card-header">
+                            <h3 class="card-title">SG STB</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="pricing-table">
+                                <tr>
+                                    <td>30 HARI</td>
+                                    <td class="price">Rp 15.000</td>
+                                </tr>
+                                <tr>
+                                    <td>60 HARI</td>
+                                    <td class="price">Rp 25.000</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <a href="order.html" class="order-button">Beli Sekarang</a>
+                        </div>
+                    </div>
+
+                    <!-- SG VIP STB Card -->
+                    <div class="pricing-card stb">
+                        <div class="card-header">
+                            <h3 class="card-title">SG VIP STB</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="pricing-table">
+                                <tr>
+                                    <td>30 HARI</td>
+                                    <td class="price">Rp 17.000</td>
+                                </tr>
+                                <tr>
+                                    <td>60 HARI</td>
+                                    <td class="price">Rp 27.000</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <a href="order.html" class="order-button">Beli Sekarang</a>
+                        </div>
+                    </div>
+
+                    <!-- SG RESSEL Card -->
+                    <div class="pricing-card premium">
+                        <div class="card-header">
+                            <h3 class="card-title">SG RESSEL</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="pricing-table">
+                                <tr>
+                                    <td>30 HARI</td>
+                                    <td class="original-price">Rp 8.000</td>
+                                </tr>
+                                <tr>
+                                    <td>60 HARI</td>
+                                    <td class="original-price">Rp 15.000</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <a href="order.html" class="order-button">Beli Sekarang</a>
+                        </div>
+                    </div>
+
+                    <!-- SG ALIBABA Card -->
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3 class="card-title">SG ALIBABA</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="pricing-table">
+                                <tr>
+                                    <td><span class="out-of-stock">1 TAHUN</span></td>
+                                    <td><span class="out-of-stock">Rp 10.000</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <a href="order.html" class="order-button">Beli Sekarang</a>
+                        </div>
+                    </div>
+
+                    <!-- ID NUSA Card -->
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3 class="card-title">ID NUSA</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="pricing-table">
+                                <tr>
+                                    <td>3 HARI</td>
+                                    <td class="original-price">Rp 3.500</td>
+                                </tr>
+                                <tr>
+                                    <td>7 HARI</td>
+                                    <td class="original-price">Rp 5.000</td>
+                                </tr>
+                                <tr>
+                                    <td>15 HARI</td>
+                                    <td class="original-price">Rp 7.000</td>
+                                </tr>
+                                <tr>
+                                    <td>22 HARI</td>
+                                    <td class="original-price">Rp 10.000</td>
+                                </tr>
+                                <tr>
+                                    <td>30 HARI</td>
+                                    <td class="original-price">Rp 12.000</td>
+                                </tr>
+                                <tr>
+                                    <td>60 HARI</td>
+                                    <td class="original-price">Rp 24.000</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <a href="order.html" class="order-button">Beli Sekarang</a>
+                        </div>
+                    </div>
+
+                    <!-- ID NUSA STB Card -->
+                    <div class="pricing-card stb">
+                        <div class="card-header">
+                            <h3 class="card-title">ID NUSA STB</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="pricing-table">
+                                <tr>
+                                    <td>3 HARI</td>
+                                    <td class="original-price">Rp 5.000</td>
+                                </tr>
+                                <tr>
+                                    <td>7 HARI</td>
+                                    <td class="original-price">Rp 7.000</td>
+                                </tr>
+                                <tr>
+                                    <td>15 HARI</td>
+                                    <td class="original-price">Rp 10.000</td>
+                                </tr>
+                                <tr>
+                                    <td>22 HARI</td>
+                                    <td class="original-price">Rp 12.000</td>
+                                </tr>
+                                <tr>
+                                    <td>30 HARI</td>
+                                    <td class="original-price">Rp 14.000</td>
+                                </tr>
+                                <tr>
+                                    <td>60 HARI</td>
+                                    <td class="original-price">Rp 25.000</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <a href="order.html" class="order-button">Beli Sekarang</a>
+                        </div>
+                    </div>
+
+                    <!-- ID IKD STB Card -->
+                    <div class="pricing-card stb">
+                        <div class="card-header">
+                            <h3 class="card-title">ID IKD STB</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="pricing-table">
+                                <tr>
+                                    <td>3 HARI</td>
+                                    <td class="original-price">Rp 3.500</td>
+                                </tr>
+                                <tr>
+                                    <td>7 HARI</td>
+                                    <td class="original-price">Rp 5.000</td>
+                                </tr>
+                                <tr>
+                                    <td>15 HARI</td>
+                                    <td class="original-price">Rp 7.000</td>
+                                </tr>
+                                <tr>
+                                    <td>22 HARI</td>
+                                    <td class="original-price">Rp 10.000</td>
+                                </tr>
+                                <tr>
+                                    <td>30 HARI</td>
+                                    <td class="original-price">Rp 12.000</td>
+                                </tr>
+                                <tr>
+                                    <td>60 HARI</td>
+                                    <td class="original-price">Rp 24.000</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <a href="order.html" class="order-button">Beli Sekarang</a>
+                        </div>
+                    </div>
                 </div>
-                    <!-- Card SG-VIP -->
-                    <div class="card premium">
-                        <h3 class="card-title">SG-VIP 2-IP Unlimited</h3>
-                        <ul class="card-list">
-                            <li class="pricing-item">
-                                <span class="duration">3 HARI</span>
-                                <span class="price">Rp 3.000</span>
-                            </li>
-                            <li class="pricing-item">
-                                <span class="duration">7 HARI</span>
-                                <span class="price">Rp 6.000</span>
-                            </li>
-                            <li class="pricing-item">
-                                <span class="duration">15 HARI</span>
-                                <span class="price">Rp 9.000</span>
-                            </li>
-                            <li class="pricing-item">
-                                <span class="duration">30 HARI</span>
-                                <span class="dis">DISKON</span>
-                                <span class="discount-price">Rp 10.000</span>
-                            </li>
-                        </ul>
-                        <a href="order.html" class="card-button">Beli Sekarang</a>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features-section">
+                <h2 class="section-title">Keunggulan VPN Kami</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">✔</div>
+                        <div class="feature-text">Berselancar dengan aman</div>
                     </div>
-                    <!-- SG DO -->
-            <div class="card stb">
-                <h3 class="card-title">SG STB</h3>
-                <ul class="card-list">
-                    <li class="pricing-item"><span class="duration">30 HARI</span><span class="price">Rp 15.000</span></li>
-                    <li class="pricing-item"><span class="duration">60 HARI</span><span class="price">Rp 25.000</span></li>
-                </ul>
-                <a href="order.html" class="card-button">Beli Sekarang</a>
-            </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✔</div>
+                        <div class="feature-text">Dukungan untuk STB OpenWRT</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✔</div>
+                        <div class="feature-text">Streaming YouTube tanpa gangguan</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✔</div>
+                        <div class="feature-text">Server stabil tanpa error</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✔</div>
+                        <div class="feature-text">Kecepatan tinggi untuk pengunduhan</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✔</div>
+                        <div class="feature-text">Anti reconnect untuk koneksi yang lebih andal</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✔</div>
+                        <div class="feature-text">Dukungan penuh untuk panggilan video</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✔</div>
+                        <div class="feature-text">Kompatibel untuk bermain game</div>
+                    </div>
+                </div>
+            </section>
 
-            <!-- SG DO VIP -->
-            <div class="card stb">
-                <h3 class="card-title">SG VIP STB</h3>
-                <ul class="card-list">
-                    <li class="pricing-item"><span class="duration">30 HARI</span><span class="price">Rp 17.000</span></li>
-                    <li class="pricing-item"><span class="duration">60 HARI</span><span class="price">Rp 27.000</span></li>
-                </ul>
-                <a href="order.html" class="card-button">Beli Sekarang</a>
-            </div>
+            <!-- Terms Section -->
+            <section class="terms-section">
+                <h2 class="section-title">⚙ PERATURAN PEMBELI ⚙</h2>
+                <div class="terms-grid">
+                    <div class="term-item">
+                        <div class="term-icon">❌</div>
+                        <div class="term-text">Tidak diperkenankan melakukan serangan DDoS</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-icon">❌</div>
+                        <div class="term-text">Tidak diperbolehkan melakukan peretasan</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-icon">❌</div>
+                        <div class="term-text">Aktivitas torrent tidak diizinkan</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-icon">❌</div>
+                        <div class="term-text">Dilarang bermain PlayStation menggunakan layanan ini</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-icon">❌</div>
+                        <div class="term-text">Pelanggaran akan dikenakan sanksi tegas</div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-            <!-- SG RESSEL -->
-            <div class="card premium">
-                <h3 class="card-title">SG RESSEL</h3>
-                <ul class="card-list">
-                    <li class="pricing-item"><span class="original-price">30 HARI</span><span class="original-price">Rp 8.000</span></li>
-                    <li class="pricing-item"><span class="original-price">60 HARI</span><span class="original-price">Rp 15.000</span></li>
-                </ul>
-                <a href="order.html" class="card-button">Beli Sekarang</a>
-            </div>
-
-            <!-- SG ALIBABA -->
-            <div class="card">
-                <h3 class="card-title">SG ALIBABA</h3>
-                <ul class="card-list">
-                    <li class="pricing-item"><span class="original-price"><s class="out-of-stock">1 TAHUN</s></span><span class="price"><s class="out-of-stock">Rp 10.000</s></span></li>
-                </ul>
-                <a href="order.html" class="card-button">Beli Sekarang</a>
-            </div>
-
-            <!-- ID NUSA -->
-            <div class="card">
-                <h3 class="card-title">ID NUSA</h3>
-                <ul class="card-list">
-                    <li class="pricing-item"><span class="original-price">3 HARI</span><span class="original-price">Rp 3.500</span></li>
-                    <li class="pricing-item"><span class="original-price">7 HARI</span><span class="original-price">Rp 5.000</span></li>
-                    <li class="pricing-item"><span class="original-price">15 HARI</span><span class="original-price">Rp 7.000</span></li>
-                    <li class="pricing-item"><span class="original-price">22 HARI</span><span class="original-price">Rp 10.000</span></li>
-                    <li class="pricing-item"><span class="original-price">30 HARI</span><span class="original-price">Rp 12.000</span></li>
-                    <li class="pricing-item"><span class="original-price">60 HARI</span><span class="original-price">Rp 24.000</span></li>
-                </ul>
-                <a href="order.html" class="card-button">Beli Sekarang</a>
-            </div>
-            <div class="card stb">
-    <h3 class="card-title">ID NUSA STB</h3>
-    <ul class="card-list">
-        <li class="pricing-item"><span class="original-price">3 HARI</span><span class="original-price">Rp 5.000</span></li>
-        <li class="pricing-item"><span class="original-price">7 HARI</span><span class="original-price">Rp 7.000</span></li>
-        <li class="pricing-item"><span class="original-price">15 HARI</span><span class="original-price">Rp 10.000</span></li>
-        <li class="pricing-item"><span class="original-price">22 HARI</span><span class="original-price">Rp 12.000</span></li>
-        <li class="pricing-item"><span class="original-price">30 HARI</span><span class="original-price">Rp 14.000</span></li>
-        <li class="pricing-item"><span class="original-price">60 HARI</span><span class="original-price">Rp 25.000</span></li>
-    </ul>
-    <a href="order.html" class="card-button">Beli Sekarang</a>
-</div>
-
-<div class="card stb">
-    <h3 class="card-title">ID IKD STB</h3>
-    <ul class="card-list">
-        <li class="pricing-item"><span class="original-price">3 HARI</span><span class="original-price">Rp 3.500</span></li>
-        <li class="pricing-item"><span class="original-price">7 HARI</span><span class="original-price">Rp 5.000</span></li>
-        <li class="pricing-item"><span class="original-price">15 HARI</span><span class="original-price">Rp 7.000</span></li>
-        <li class="pricing-item"><span class="original-price">22 HARI</span><span class="original-price">Rp 10.000</span></li>
-        <li class="pricing-item"><span class="original-price">30 HARI</span><span class="original-price">Rp 12.000</span></li>
-        <li class="pricing-item"><span class="original-price">60 HARI</span><span class="original-price">Rp 24.000</span></li>
-    </ul>
-    <a href="order.html" class="card-button">Beli Sekarang</a>
-</div>
-           </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features">
-            <h2 class="section-title">Keunggulan VPN Kami</h2>
-            <ul class="features-list">
-                <li>Berselancar dengan aman</li>
-                <li>Dukungan untuk STB OpenWRT</li>
-                <li>Streaming YouTube tanpa gangguan</li>
-                <li>Server stabil tanpa error</li>
-                <li>Kecepatan tinggi untuk pengunduhan</li>
-                <li>Anti reconnect untuk koneksi yang lebih andal</li>
-                <li>Dukungan penuh untuk panggilan video</li>
-                <li>Kompatibel untuk bermain game</li>
-            </ul>
-        </section>
-
-        <!-- Terms Section -->
-        <section class="features">
-            <h2 class="section-title">⚙ PERATURAN PEMBELI ⚙</h2>
-            <ul class="features-list">
-                <li>Tidak diperkenankan melakukan serangan DDoS</li>
-                <li>Tidak diperbolehkan melakukan peretasan</li>
-                <li>Aktivitas torrent tidak diizinkan</li>
-                <li>Dilarang bermain PlayStation menggunakan layanan ini</li>
-                <li>Pelanggaran akan dikenakan sanksi tegas</li>
-            </ul>
-        </section>
-    </main>
-
-    <script>
-        const scrollContainer = document.querySelector('.horizontal-scroll');
-        const scrollAmount = 300;
-
-        function scrollLeft() {
-            scrollContainer.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        }
-
-        function scrollRight() {
-            scrollContainer.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        }
-    </script>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; SETELAH DIKIRIM SS PAY DAN AKAN KAMI PROSES</p>
+        </footer>
+    </div>
 </body>
 </html>
