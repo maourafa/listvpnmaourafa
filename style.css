@@ -175,6 +175,10 @@ body {
     background: linear-gradient(135deg, #ff5722, #ffcc00);
 }
 
+.premiumstb {
+    background: linear-gradient(135deg,#fff71d,#fa0090ed, #bc3dff,#2fe5f1d6);
+}
+
 .premium .card-title {
     color: #000;
 }
