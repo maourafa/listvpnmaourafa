@@ -8,7 +8,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #0d1117;
-    color: black;
+    color: white;
     line-height: 1.6;
 }
 
@@ -70,7 +70,8 @@ body {
 
 .pricing-card {
     background: linear-gradient(135deg, #1e2a3b, #273349);
-    border-radius: 10px;
+    border-radius: 20px;
+    margin: 20px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -169,7 +170,11 @@ body {
     background: linear-gradient(90deg, #ffcc00, #ff5722);
     transform: scale(1.05);
 }
-
+.sr {
+  background: linear-gradient(135deg, #fff71d, #ff7eb3, #bc3dff, #2fe5f1);
+  border: 2px solid gold;
+  box-shadow: 0 0 20px gold, 0 0 40px #ff7eb3, 0 0 60px #2fe5f1;
+}
 /* Special Card Styles */
 .premium {
     background: linear-gradient(135deg, #ff00cc, #00f0ff, #ffea00);
@@ -187,12 +192,15 @@ body {
     0 0 100px #ffdd00;
 }
 
-.premium .card-title {
-    color: #000;
+.premiumstb .card-title {
+    color: black;
 }
 
-.premium .price {
-    color: #000;
+.premiumstb .pricing-table {
+    color: black;
+}
+.premiumstb .price {
+    color: white;
 }
 
 .stb {
@@ -200,9 +208,9 @@ body {
 }
 
 .do {
-    background: linear-gradient(135deg,#f5f5f5,#6e6e6e,#0e0e0e);
-  border: 2px solid #b0b0b0;
-  box-shadow: 0 0 8px #ccc;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: 3px solid #0072ff;
+  box-shadow: 0 0 18px #00c6ff;
 }
 
 .free-trial .card-title {
